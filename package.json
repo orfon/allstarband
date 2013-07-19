@@ -27,7 +27,7 @@
     "dependencies": {
         "ringo-sqlstore": "0.2",
         "reinhardt": "0.2",
-        "stick": "0.2",
+        "stick": "0.1",
         "gestalt": "0.1",
     },
     "engines": {
