@@ -1,2 +1,2 @@
-rp install
-ringo app\main.js
+@call rp install
+@call ringo -m packages\ app\main.js
