@@ -1,0 +1,13 @@
+Best practices for Ringo web applications
+==========================================
+
+A full stack framework with ORM, templating, URL routing and configuration managment.
+
+Help
+========
+
+database models.js
+	https://github.com/grob/ringo-sqlstore/wiki
+
+stick routing
+   http://ringojs.org/tutorial/stickapp.md

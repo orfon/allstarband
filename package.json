@@ -1,0 +1,37 @@
+{
+    "name": "ringo-virtue",
+    "version": "0.1.0",
+    "description": "best practice ringo skeleton web application",
+    "homepage": "http://ringojs.org",
+    "keywords": [
+        "commonjs",
+        "jsgi",
+        "web"
+    ],
+    "author": "Simon Oberhammer <simon@nekapuzer.at",
+    "contributors": [
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git://github.com/ringo/ringo-virtue.git"
+        }
+    ],
+    "bugs": "http://github.com/ringo/ringo-virtue/issues",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/hns/stick/blob/master/LICENSE"
+        }
+    ],
+    "dependencies": {
+        "ringo-sqlstore": "0.2",
+        "reinhardt": "0.2",
+        "stick": "0.2",
+        "gestalt": "0.1",
+    },
+    "engines": {
+        "ringojs": "0.9"
+    },
+    "main": "lib/main.js"
+}

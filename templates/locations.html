@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h2> Visitors &amp; Locations </h2>
+
+	<ul>
+	{% for location in locations %}
+		<li> {{location.name}}
+			<ul>
+				{% for visitor in location.visitors.all %}
+					<li>
+						{{ visitor.firstname}} <br/>
+						Likes cats: {{ visitor.likesCats }} <br/>
+						Last visit: {{visitor.lastVisit|date:'HH:mm'}}
+					</li>
+				{% endfor %}
+			</ul>
+		</li>
+	{% endfor %}
+	</ul>
+
+<a href='./'>add another user</a>
+
+{% endblock %}
