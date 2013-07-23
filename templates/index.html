@@ -3,7 +3,7 @@
 {% block content %}
 	<h2> Welcome to Ringo Virtue </h2>
 
-	<form action="./locations" method="POST">
+	<form action="{% url "locations" %}" method="POST">
 		Firstname: <input type="text" name="firstname"><br/>
 		Location: <input type="text" name="location"><br/>
 		Check if you like cats: <input type="checkbox" name="likesCats"><br/>

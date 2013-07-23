@@ -8,7 +8,8 @@ exports.db = {
 
 exports.templates = {
    loader: [module.resolve('../templates/')],
-   filters: [module.resolve('../app/filters')],
+   filters: [require('../app/filters')],
+   tags: [require('../app/tags')],
    debug: true
 }
 

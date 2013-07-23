@@ -12,6 +12,7 @@
 						{{ visitor.firstname}} <br/>
 						Likes cats: {{ visitor.likesCats }} <br/>
 						Last visit: {{visitor.lastVisit|date:'HH:mm'}}
+						<a href="{% url "user" firstname=visitor.firstname %}"> Detail page </a>
 					</li>
 				{% endfor %}
 			</ul>
@@ -19,6 +20,6 @@
 	{% endfor %}
 	</ul>
 
-<a href='./'>add another user</a>
+<a href='{% url "index" %}'>add another user</a>
 
 {% endblock %}

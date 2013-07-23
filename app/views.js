@@ -1,4 +1,4 @@
-var {templates, app, log} = require('./app');
+var {templates, app, log} = require('./main');
 var {User, Location} = require('./models');
 var response = require('ringo/jsgi/response')
 export('app');
@@ -46,5 +46,15 @@ app.post('/locations', function(req) {
 app.get('/locations', function() {
    return templates.renderResponse('locations.html', {
       locations: Location.all()
+   });
+});
+
+app.get('/user/:firstname', function(req, firstname) {
+   var user = User.getByName(firstname);
+   if (user === null) {
+      return response.notfound();
+   }
+   return templates.renderResponse('user.html', {
+      user: user
    });
 });

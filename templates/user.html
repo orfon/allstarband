@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h2> User {{ user.firstname }} </h2>
+
+	Likes cats: {{ user.likesCats }} <br/>
+	Last visit: {{ user.lastVisit|date:'HH:mm' }}<br/>
+	Location: {{ user.location.name }}
+
+<a href='{% url "index" %}'>add another user</a>
+
+{% endblock %}

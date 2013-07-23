@@ -1,4 +1,4 @@
-var {db} = require('./app');
+var {db} = require('./main');
 
 var User = exports.User = db.defineEntity('User', {
    properties: {
