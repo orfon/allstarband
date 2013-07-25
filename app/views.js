@@ -13,7 +13,7 @@ app.post('/locations', function(req) {
    var locationName = req.params.location;
    var likesCats = (req.params.likesCats === 'on');
 
-   // does location already exist?
+   // does location exist?
    var location = Location.getByName(locationName);
    if (location === null) {
       location = new Location({
@@ -23,7 +23,7 @@ app.post('/locations', function(req) {
       log.info('Created new location: ', location.name)
    }
 
-   // does firstname already exist?
+   // does firstname exist?
    var user = User.getByName(firstname);
    if (user === null) {
       user = new User({
