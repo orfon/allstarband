@@ -50,7 +50,9 @@ if (require.main === module) {
    var {Server}  = require('ringo/httpserver');
    var server = new Server({
      appModule: module.resolve('./main'),
-     appName: 'rootApp'
+     appName: 'rootApp',
+     staticDir: config.get('server').staticDir,
+     staticMountpoint: config.get('server').staticMountpoint
    });
    server.start();
 }
