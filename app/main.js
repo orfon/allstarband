@@ -1,3 +1,7 @@
+/**
+ * @fileoverview
+ * This bootstraps the web framework.
+ */
 var {Store, ConnectionPool, Cache} = require("ringo-sqlstore");
 var {Environment} = require('reinhardt');
 var {Application} = require('stick');
@@ -9,7 +13,7 @@ var log = exports.log = require("ringo/logging").getLogger(module.id);
 
 // @@ verify all necessary config settings are presetn
 
-// db
+// Create database caches
 var entityCache = module.singleton("entityCache", function() {
     return new Cache(config.get('db').cacheSize);
 });
@@ -20,22 +24,26 @@ var connectionPool = module.singleton('connectionpool', function() {
    return new ConnectionPool(config.get('db'));
 });
 
+// Create database connection and set caches
 var db = exports.db = new Store(connectionPool);
 db.setEntityCache(entityCache);
 db.setQueryCache(queryCache);
 
-// stick
+// Root stick application
 var rootApp = exports.rootApp = new Application();
 rootApp.configure("etag", "requestlog", "notfound", "session", "params", "mount");
-rootApp.configure("static");
 if (config.get('debug') === true) {
    rootApp.configure(require('reinhardt/middleware'));
-   //rootApp.configure("error");
+   rootApp.configure("error");
 }
 
-// reinhardt
+// Create templating environment
 exports.templates = new Environment(config.get('templates'));
-// return a routing app for views.js
+
+// Accessing this property creates a
+// new stick application with the `route`
+// middleware preconfigured. This is convinient
+// for views.js
 Object.defineProperty(exports, 'app', {
    get: function() {
       var app = Application();
@@ -45,7 +53,8 @@ Object.defineProperty(exports, 'app', {
 })
 rootApp.mount(config.get('server').baseUri, module.resolve('./views'));
 
-// start server if run as main script
+// Start the http server if this
+// file is run from command line.
 if (require.main === module) {
    var {Server}  = require('ringo/httpserver');
    var server = new Server({
