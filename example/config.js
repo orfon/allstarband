@@ -7,9 +7,9 @@ exports.db = {
 }
 
 exports.templates = {
-   loader: [module.resolve('../templates/')],
-   filters: [require('../app/filters')],
-   tags: [require('../app/tags')],
+   loader: [module.resolve('./templates/')],
+   filters: [require('./filters')],
+   tags: [require('./tags')],
    debug: true
 }
 
@@ -19,6 +19,7 @@ exports.server = {
    baseUri: '/',
    host: '127.0.0.1',
    port: 8080,
+   views: module.resolve('./views'),
    staticDir: module.resolve('../static/'),
    staticMountpoint: '/static'
 }

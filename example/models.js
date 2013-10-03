@@ -1,4 +1,4 @@
-var {db} = require('./main');
+var {db} = require('virtue');
 
 var User = exports.User = db.defineEntity('User', {
    properties: {

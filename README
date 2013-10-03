@@ -1,4 +1,8 @@
 VirtueJs
 ==========================================
 
-https://ringo.github.io/virtuejs/
+Start the example with:
+
+    virtue ./example/config.js
+
+
