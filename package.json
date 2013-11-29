@@ -1,8 +1,7 @@
 {
     "name": "ringo-virtue",
     "version": "0.1.0",
-    "description": "best practice ringo skeleton web application",
-    "homepage": "http://ringojs.org",
+    "description": "quickstart your ringo web app",
     "keywords": [
         "commonjs",
         "jsgi",
@@ -14,24 +13,24 @@
     "repositories": [
         {
             "type": "git",
-            "url": "git://github.com/ringo/ringo-virtue.git"
+            "url": "git://github.com/oberhamsi/ringo-virtue.git"
         }
     ],
-    "bugs": "http://github.com/ringo/ringo-virtue/issues",
+    "bugs": "http://github.com/oberhamsi/ringo-virtue/issues",
     "licenses": [
         {
             "type": "MIT",
-            "url": "https://github.com/hns/stick/blob/master/LICENSE"
+            "url": "https://github.com/ringo/stick/blob/master/LICENSE"
         }
     ],
     "dependencies": {
-        "ringo-sqlstore": "0.2",
+        "ringo-sqlstore": "0.3",
         "reinhardt": "0.2",
-        "stick": "0.1",
+        "stick": "0.3",
         "gestalt": "0.1",
     },
     "engines": {
-        "ringojs": "0.9"
+        "ringojs": "0.10"
     },
     "main": "lib/main.js"
 }
