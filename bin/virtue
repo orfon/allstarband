@@ -49,4 +49,4 @@ else
     CONFIG_PATH=`readlink -f $1`
 fi
 
-"$RINGO" -J-client virtue/lib/main ${CONFIG_PATH} ${@:2}
+"$RINGO" -J-client ringo-virtue/lib/main ${CONFIG_PATH} ${@:2}
