@@ -1,4 +1,4 @@
-var {db} = require('virtue');
+var {db} = require('ringo-virtue');
 
 var User = exports.User = db.defineEntity('User', {
    properties: {
