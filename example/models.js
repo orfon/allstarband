@@ -1,4 +1,4 @@
-var {db} = require('ringo-virtue');
+var {db} = require('allstarband');
 
 var User = exports.User = db.defineEntity('User', {
    properties: {
@@ -37,3 +37,7 @@ Location.getByName = function(name) {
    }
    return null;
 }
+
+
+// call this once to create all tables
+db.syncTables();

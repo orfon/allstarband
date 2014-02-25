@@ -1,4 +1,4 @@
-var {templates, app, log} = require('ringo-virtue');
+var {templates, app, log} = require('allstarband');
 var {User, Location} = require('./models');
 var response = require('ringo/jsgi/response')
 export('app');

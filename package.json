@@ -1,5 +1,5 @@
 {
-    "name": "ringo-virtue",
+    "name": "allstarband",
     "version": "0.1.2",
     "description": "quickstart your ringo web app",
     "keywords": [
@@ -13,10 +13,10 @@
     "repositories": [
         {
             "type": "git",
-            "url": "git://github.com/oberhamsi/ringo-virtue.git"
+            "url": "git://github.com/orfon/allstarband.git"
         }
     ],
-    "bugs": "http://github.com/oberhamsi/ringo-virtue/issues",
+    "bugs": "http://github.com/orfon/allstarband/issues",
     "licenses": [
         {
             "type": "MIT",

@@ -1,11 +1,11 @@
 #!/bin/bash
 # -----------------------------------------------------------------------------
-# Start Script for virtue
+# Start Script for allstarband
 #
 # Needs ringo command on the PATH
 
 # first argument must be path to config.js
-# make that path absolute so virtue/lib/main can
+# make that path absolute so allstarband/lib/main can
 # read it
 
 if [ $# -eq 0 ]; then
@@ -15,4 +15,4 @@ else
     CONFIG_PATH=`readlink -f $1`
 fi
 
-ringo -J-client ringo-virtue/lib/main ${CONFIG_PATH} ${@:2}
+ringo -J-client allstarband/lib/main ${CONFIG_PATH} ${@:2}
